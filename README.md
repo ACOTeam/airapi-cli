@@ -1,3 +1,3 @@
 # This is a book.
 
-- [Start it] (/docs/langs.md)
+- [Start it](docs/langs.md)

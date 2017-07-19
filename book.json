@@ -1,0 +1,14 @@
+
+{
+  "title": "airapi",
+  "gitbook": ">3.0.0",
+  "plugins": ["prism", "-highlight"],
+  "pluginsConfig": {
+  },
+  "links": {
+    "sharing": {
+      "facebook": false,
+      "twitter": false
+    }
+  }
+}

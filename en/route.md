@@ -1,6 +1,6 @@
 # 路由
 
-##### 1. api  :
+##### 1. api  : {#api}
 @api {routeMeth}  {path} 
 routeMeth :  get  post  put delete
 
@@ -13,7 +13,7 @@ Example:
 @api {get} /region/:_regionId/news 
 ```
 
-##### 2. apiName  :
+##### 2. apiName  : {#apiName}
 @apiName {name} 
 
 说明： API的名称
@@ -24,7 +24,7 @@ Example:
 @apiName getNews
 ```
 
-##### 3. apiVersion  :
+##### 3. apiVersion  : {#apiVersion}
 @apiVersion {version} 
 
 说明：API的版本号
@@ -36,7 +36,7 @@ Example:
 @apiVersion 0.1.0
 ```
 
-##### 4. apiGroup  :
+##### 4. apiGroup  : {#apiGroup}
 @apiGroup {groupName} 
 
 说明：API的分组，例如用户相关的API可以设置为同一个用户分组
@@ -48,7 +48,7 @@ Example:
 @apiGroup News
 ```
 
-##### 5. apiPermission  :
+##### 5. apiPermission  : {#apiPermission}
 @apiPermission {permission} 
 
 说明：API的权限定义，可以调用该API的用户列表
@@ -60,7 +60,7 @@ Example:
 @apiPermission public,user
 ```
 
-##### 6. apiDescription  :
+##### 6. apiDescription  : {#apiDescription}
 @apiDescription {description} 
 
 说明：API的描述
@@ -73,7 +73,7 @@ Example:
     获取新闻列表
 ```
 
-##### 6. apiHeaders  :
+##### 6. apiHeaders  : {#apiHeaders}
 @apiHeaders
 
 说明：API的Headers 描述，可以在此处定义支持的header头
@@ -88,7 +88,7 @@ Example:
     }
 ```
 
-##### 7. apiParams  :
+##### 7. apiParams  : {#apiParams}
 @apiParams
 
 说明：API的Params 描述，可以在此处定义支持的paramas
@@ -103,7 +103,7 @@ Example:
     }
 ```
 
-##### 8. apiQuery  :
+##### 8. apiQuery  : {#apiQuery}
 @apiQuery
 
 说明：API的Query 描述，可以在此处定义支持的querys, 应该将通用的Query写在配置文件中，此处写特有的query
@@ -111,7 +111,7 @@ Example:
 
 Example:
 
-```
+```js
 @apiQuery
     {
         userId: String //用户id

@@ -1,3 +1,0 @@
-- [配置文件] (config.md)
-- [模型] (model.md)
-- [路由] (route.md)

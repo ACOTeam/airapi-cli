@@ -1,0 +1,19 @@
+
+{
+  "title": "airapi",
+  "gitbook": ">3.0.0",
+  "plugins": ["prism", "-highlight"],
+  "pluginsConfig": {
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-tomorrow.css" 
+      ]
+    }
+  },
+  "links": {
+    "sharing": {
+      "facebook": false,
+      "twitter": false
+    }
+  }
+}

@@ -1,18 +1,30 @@
-# 模型
+# Model
 
 @apiModel  :
 @apiModel {modelName} 
 
-说明： 定义模型，模型的定义格式：" 字段名 ： 类型 ,  描述 " ，以定义对象的方式书写
+Instruction: defind Models，The definition of the model  format is : " FieldName ： Type ,  Description " 
 
 
 Example:
 
 ```
+CouponHistory.js
+
+const mongoose = load('mongoose')
+
+
 /* @apiModel CouponHistory
  {
-    userId: String,  // 用户的id
-    couponId: String  // 优惠券
+    userId: String,  // id of user
+    couponId: String  // coupon id
  }
  */
+module.exports = new mongoose.Schema({
+  userId: String,
+  couponId: String
+}, {
+  collection: 'CouponHistory'
+})
+
 ```

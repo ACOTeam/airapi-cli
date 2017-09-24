@@ -1,10 +1,32 @@
-# 路由
+# Router
+
+#### demo:
+```
+/**
+  @api {post} /users/order
+  @apiName PostOrder
+  @apiVersion 0.1.0
+  @apiGroup Order
+  @apiPermission User
+  @apiDescription
+      create one order
+  @apiHeaders
+    {
+      x-consumer-custom-id : string //user id after auth
+      x-consumer-username : string //user name after auth
+    }
+  @apiBody
+    {
+        venuesId: string //id of venues
+    }
+*/
+```
 
 ##### 1. api  : {#api}
 @api {routeMeth}  {path} 
 routeMeth :  get  post  put delete
 
-说明： 定义路由的基本信息，包括路由的方法、路由的路径
+Instruction:  define  base Info of the router ，including Meth、Path of the router
 
 
 Example:
@@ -16,7 +38,7 @@ Example:
 ##### 2. apiName  : {#apiName}
 @apiName {name} 
 
-说明： API的名称
+Instruction: name of the route
 
 Example:
 
@@ -27,7 +49,7 @@ Example:
 ##### 3. apiVersion  : {#apiVersion}
 @apiVersion {version} 
 
-说明：API的版本号
+Instruction:Version of the route
 
 
 Example:
@@ -39,7 +61,7 @@ Example:
 ##### 4. apiGroup  : {#apiGroup}
 @apiGroup {groupName} 
 
-说明：API的分组，例如用户相关的API可以设置为同一个用户分组
+Instruction:  group of the route ，such as all User about Router can use One apiGroup -> "User"
 
 
 Example:
@@ -51,7 +73,7 @@ Example:
 ##### 5. apiPermission  : {#apiPermission}
 @apiPermission {permission} 
 
-说明：API的权限定义，可以调用该API的用户列表
+Instruction: permission of the route
 
 
 Example:
@@ -63,20 +85,20 @@ Example:
 ##### 6. apiDescription  : {#apiDescription}
 @apiDescription {description} 
 
-说明：API的描述
+Instruction: description of the route
 
 
 Example:
 
 ```
 @apiDescription
-    获取新闻列表
+    Get list of News
 ```
 
 ##### 6. apiHeaders  : {#apiHeaders}
 @apiHeaders
 
-说明：API的Headers 描述，可以在此处定义支持的header头
+Instruction: header support of the route  
 
 
 Example:
@@ -84,14 +106,14 @@ Example:
 ```
 @apiHeaders
     {
-      x-user-id : string //授权过后的用户id
+      jwt : string //jwt string
     }
 ```
 
 ##### 7. apiParams  : {#apiParams}
 @apiParams
 
-说明：API的Params 描述，可以在此处定义支持的paramas
+Instruction: params support of the route  
 
 
 Example:
@@ -99,14 +121,14 @@ Example:
 ```
 @apiParams
     {
-      _regionId : string //区域id
+      _regionId : string //id of region
     }
 ```
 
 ##### 8. apiQuery  : {#apiQuery}
 @apiQuery
 
-说明：API的Query 描述，可以在此处定义支持的querys, 应该将通用的Query写在配置文件中，此处写特有的query
+Instruction: query support of the route  
 
 
 Example:
@@ -114,6 +136,21 @@ Example:
 ```js
 @apiQuery
     {
-        userId: String //用户id
+        userId: String // id of user
+    }
+```
+
+##### 9. apiBody  : {#apiBody}
+@apiBody
+
+Instruction: body support of the route  
+
+
+Example:
+
+```js
+@apiBody
+    {
+        userId: String // id of user
     }
 ```

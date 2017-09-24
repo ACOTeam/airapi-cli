@@ -1,5 +1,27 @@
 # 路由
 
+#### demo:
+```
+/**
+  @api {post} /users/order
+  @apiName PostOrder
+  @apiVersion 0.1.0
+  @apiGroup Order
+  @apiPermission User
+  @apiDescription
+      create one order
+  @apiHeaders
+    {
+      x-consumer-custom-id : string //user id after auth
+      x-consumer-username : string //user name after auth
+    }
+  @apiBody
+    {
+        venuesId: string //id of venues
+    }
+*/
+```
+
 ##### 1. api  : {#api}
 @api {routeMeth}  {path} 
 routeMeth :  get  post  put delete

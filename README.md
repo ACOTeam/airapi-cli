@@ -1,1 +1,1 @@
-- [Start it](docs/langs.md)
+自动化文档生成工具

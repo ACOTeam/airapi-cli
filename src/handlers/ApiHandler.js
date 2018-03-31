@@ -1,7 +1,7 @@
 import BaseHandler from '../basehandler'
 import fs from 'fs'
-const Regex = require('regexper.js')
 import _ from 'lodash'
+const Regex = require('regexper.js')
 
 class ApiHandler extends BaseHandler {
   check ({ filePath }) {
@@ -89,7 +89,6 @@ class ApiHandler extends BaseHandler {
         let versoinsApis = _.groupBy(nameApis[nameApi], 'version')
         let versionList = []
         for (let versionApi in versoinsApis) {
-          console.log(versoinsApis[versionApi])
           versionList.push(versoinsApis[versionApi][0])
         }
         apiList.push({

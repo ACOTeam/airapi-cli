@@ -1,6 +1,6 @@
 {
   "name": "airapi-cli",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "description": "a tool for generate api doc",
   "main": "index.js",
   "bin": {
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com:aircode/airapi-cli.git"
+    "url": "git@github.com:ACOTeam/airapi-cli.git"
   },
   "author": "kelvv",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/aircode/airapi-cli/issues"
+    "url": "https://github.com/ACOTeam/airapi-cli/issues"
   },
-  "homepage": "https://gitlab.com/aircode/airapi-cli#README",
+  "homepage": "https://github.com/aircode/airapi-cli#README",
   "dependencies": {
     "airapi-web": "^2.1.0",
     "babel-polyfill": "^6.23.0",

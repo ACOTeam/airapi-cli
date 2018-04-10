@@ -6,6 +6,25 @@
   @apiPermission public
   @apiDescription
       获取用户列表
+
+  @apiSuccessExample
+    {
+      "status": "OK",
+      "code": 200,
+      "data": [
+          {
+              "id": 1,
+              "name": "test1",
+              "logo": "http://image.airapi.com/s.jpg"
+          }
+      ]
+    }
+
+  @apiParamExample
+    {
+      "name":"test",
+    }
+
 */
 global.router.get('/account/users',
   require('/routes/account/get')

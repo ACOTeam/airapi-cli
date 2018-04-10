@@ -11,7 +11,7 @@ class ApiHandler extends BaseHandler {
   }
 
   handle ({ data }) {
-    let areaRegex = new Regex(/^(\/\*+|#+|"+|%\{|=)(?:(?!\1)[\s\S])+?(?:\*\/+|#+|"+|%\}|=)/, 'img')
+    let areaRegex = new Regex(/^(\/\*+|#+|"+|%\{|=)(?:(?!\1)[\s\S])+?(?:\*\/+|#+|%\}|=)/, 'img')
     let apiList = []
     for (let area of areaRegex.matches(this.content)) {
       if (!/@apiName\s*(\S+)/.exec(area.value)) {
@@ -30,7 +30,9 @@ class ApiHandler extends BaseHandler {
         headers: [],
         params: [],
         query: [],
-        body: []
+        body: [],
+        apiSuccessExample: /@apiSuccessExample([^@]+)/.exec(area.value) ? /@apiSuccessExample([^@]+)/.exec(area.value)[1].trim() : '',
+        apiParamExample: /@apiParamExample([^@]+)/.exec(area.value) ? /@apiParamExample([^@]+)/.exec(area.value)[1].trim() : ''
       }
 
       // header handler
